@@ -1,15 +1,13 @@
-"use strict";
+'use strict';
 
-//Set variable for Zomato Key
-const zomatoKey = "001bff94b90bf77eb48c79d0e762419c"
+//set variables
+var city = ''
+var breweryURL = "https://api.openbrewerydb.org/breweries?by_city=" + city + "&sort=-name ";
 
-//Create AJAX call
-// var queryURL = "https://developers.zomato.com/api/v2.1/cities?user-key=" + zomatoKey + "&q=Denver"
+//generates call and logs response for openbrewery
 $.ajax({
-    url: "https://developers.zomato.com/api/v2.1/restaurant?res_id=RESID",
-    dataType: 'json',
-    async: true,
-    beforeSend: function(xhr){xhr.setRequestHeader('user-key', 
-    zomatoKey);},  // This inserts the api key into the HTTP header
-    success: function(response) { console.log(response) } });
-
+    url: breweryURL,
+    method: "GET"
+}).then(function(response) {
+    console.log(response);
+});
