@@ -15,6 +15,7 @@ body {
     background-image: url(https://jwhendershott.github.io/DateNight/site-background.jpg);
     background-attachment: fixed;
     background-size: cover;
+    background-blend-mode: darken;
 }
 .buttons {
     margin-top: 50px;
