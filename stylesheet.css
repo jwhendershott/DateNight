@@ -13,3 +13,12 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+.subtitle {
+    font-family: 'Fraunces', serif;
+    font-size: 36px;
+    margin-top: 50px;
+}
+.buttons {
+    margin-top: 75px;
+    padding-bottom: 200px;
+}
