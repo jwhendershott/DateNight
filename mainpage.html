@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Night Out</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
     <link rel="stylesheet" href="stylesheet.css">
@@ -12,12 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;1,700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="night-background">
     <section class="hero is-danger">
         <div class="hero-body">
           <div class="container">
             <h1 class="title">
-              Date Night
+              Night Out
             </h1>
           </div>
         </div>
@@ -34,12 +34,20 @@
           <div class="buttons center">
             <button class="button is-primary is-large left-button" id="find-drinks">Find a Restaurant</button>
             <button class="button is-primary is-large right-button" >Find an Event</button>
+
+            <div class="control">
+              <input class="input is-danger" type="text" placeholder="Search by City" style="width: 300px; margin-left: 425px; margin-top: 20px;">
+            </div>
+          </div>
+          <div class="buttons">
+            <a class="button is-primary is-large" style="margin-left: 250px;">Find a Restaurant</a>
+            <a class="button is-primary is-large" style="margin-left: 200px;">Find a Movie Theater</a>
           </div>
         </div>
       </section>
       <footer class="footer">
         <div class="content has-text-centered">
-          <p>Made with 💗, by <strong>Jake, Rahul, and Carlos</strong></p>
+          <p>Made with love, by <strong>Jake, Rahul, and Carlos</strong></p>
         </div>
       </footer>
 

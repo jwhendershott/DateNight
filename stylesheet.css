@@ -11,10 +11,17 @@
     font-size: 36px;
     margin-top: 50px;
 }
-body {
+#night-background {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://jwhendershott.github.io/DateNight/site-background.jpg);
     background-attachment: fixed;
     background-size: cover;
+    background-blend-mode: darken;
+}
+#brewery-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://jwhendershott.github.io/DateNight/brewer-background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: darken;
 }
 .buttons {
     margin-top: 50px;
@@ -39,4 +46,7 @@ body {
 
 .button {
     width: 250px;
+}
+.container {
+    padding-bottom: 10px;
 }
