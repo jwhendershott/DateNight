@@ -1,5 +1,6 @@
 'use strict';
 
+
 //set variables
 var city = document.getElementById("city-field");
 const tmKey = "8IbZBo40AnRzs987iA70DEBWvamJn6Ub"
@@ -18,6 +19,8 @@ $("#find-drinks").on("click", function(event) {
     }).then(function(response) {
         console.log(response);
     });
+    
+    window.location.href='brewery.html';
 })
 
 // .on("click") function associated with Find Event button
@@ -43,4 +46,7 @@ $("#find-event").on("click", function(event) {
                     console.log(err)
                 }
     }) 
+    
+    window.location.href='events.html';
 });
+
