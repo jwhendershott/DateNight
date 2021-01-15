@@ -23,6 +23,12 @@
     background-size: cover;
     background-blend-mode: darken;
 }
+#events-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://jwhendershott.github.io/DateNight/concert-background.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}
 .buttons {
     margin-top: 50px;
     padding-bottom: 200px;
