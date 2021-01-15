@@ -18,7 +18,7 @@
     background-blend-mode: darken;
 }
 #brewery-background {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://jwhendershott.github.io/DateNight/brewery-background.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://jwhendershott.github.io/DateNight/brewer-background.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-blend-mode: darken;
@@ -46,4 +46,7 @@
 
 .button {
     width: 250px;
+}
+.container {
+    padding-bottom: 10px;
 }
