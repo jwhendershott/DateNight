@@ -28,7 +28,6 @@ $("#searchButton").on("click", function(event) {
 
     });
     
-    // window.location.href='brewery.html';
 })
 
 // .on("click") function associated with Find Event button
@@ -44,18 +43,22 @@ $("#searchButton").on("click", function(event) {
         url:"https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey=" + tmKey + "&city=" + city,
         async:true,
         dataType: "json",
-        success: function(json) {
-                    console.log(json);
+        success: function(response) {
+                    console.log(response);
                     // Parse the response.
-                    // Do other things.
+                    console.log(response._embedded.events[0].name);
+                    console.log(response._embedded.events[0].url);
+
+                    $("#event-name").html("Event Name: " + response._embedded.events[0].name);
+                    $("#event-url").html("More Information: " + response._embedded.events[0].url);
+                    
+
                 },
         error: function(err) {
-                    // This time, we do not end up here!
                     console.log(err)
                 }
     }) 
     
-    // window.location.href='events.html';
 });
 
 $("#searchResults").hide();
