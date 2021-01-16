@@ -50,7 +50,7 @@ $("#searchButton").on("click", function(event) {
                     console.log(response._embedded.events[0].url);
 
                     $("#event-name").html("Event Name: " + response._embedded.events[0].name);
-                    $("#event-url").html("More Information: " + response._embedded.events[0].url);
+                    $("#event-url").html("<a href='" + response._embedded.events[0].url + "'>" + response._embedded.events[0].url + "</a>");
                     
 
                 },
