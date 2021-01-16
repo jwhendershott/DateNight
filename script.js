@@ -50,3 +50,8 @@ $("#find-event").on("click", function(event) {
     window.location.href='events.html';
 });
 
+$("#searchResults").hide();
+
+$("#searchButton").click(function(){
+    $("#searchResults").show();
+})
