@@ -32,43 +32,44 @@
           </div>
         </div>
         <div class="buttons center">
-          <button class="button is-primary is-large right-button" id="searchButton">Search for a Brewery/Event</button>
+          <button class="button is-primary is-large" id="searchButton">Search for a Brewery/Event</button>
         </div>
       </div>
     </section>
     <section class="section" id="searchResults">
       <div class="columns">
-        <div class="column listItems has-text-primary"><u>List of Breweries</u></div>
-        <div class="column listItems has-text-primary"><u>List of Events</u></div>
+        <div class="column listItems has-text-primary"><u>Brewery</u><br>
+          <div class="card breweryCard">
+            <header class="card-header">
+              <p class="card-header-title" id="name"></p>
+                <span class="icon">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                <p id="phone"></p>
+                <p id="street"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column listItems has-text-primary"><u>Event</u><br>
+          <div class="card eventCard">
+            <header class="card-header">
+              <p class="card-header-title" id="event-name"></p>
+                <span class="icon">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                <p id="event-url"></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="columns">
-        <div class="card breweryCard">
-          <header class="card-header">
-            <p class="card-header-title" id="name">Brewery Name</p>
-              <span class="icon">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span>
-          </header>
-          <div class="card-content">
-            <div class="content">
-              <p id="phone"></p>
-              <p id="street"></p>
-            </div>
-          </div>
-        </div>
-        <div class="card eventCard">
-          <header class="card-header">
-            <p class="card-header-title" id="event-name">Event Name</p>
-              <span class="icon">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span>
-          </header>
-          <div class="card-content">
-            <div class="content">
-              <p id="event-url"></p>
-            </div>
-          </div>
-        </div>
     </section>
     <footer class="footer">
       <div class="content has-text-centered">

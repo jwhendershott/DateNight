@@ -40,14 +40,18 @@
     padding-bottom: 50px;
 }
 .breweryCard {
-    margin-left: 150px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 20px;
     width: 365px;
+    font-size: 24px;
 }
 .eventCard {
-    margin-left: 300px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 20px;
     width: 365px;
+    font-size: 24px;
 }
 .footer {
     padding: 25px;
@@ -56,7 +60,6 @@
     display: flex;
     justify-content: center;
 }
-
 .button {
     width: 350px;
 }
