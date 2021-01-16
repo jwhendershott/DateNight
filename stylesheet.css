@@ -11,6 +11,12 @@
     font-size: 36px;
     margin-top: 50px;
 }
+.listItems {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+}
 #night-background {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://jwhendershott.github.io/DateNight/site-background.jpg);
     background-attachment: fixed;
@@ -31,27 +37,28 @@
 }
 .buttons {
     margin-top: 50px;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
+}
+.breweryCard {
+    margin-left: 150px;
+    margin-bottom: 20px;
+    width: 365px;
+}
+.eventCard {
+    margin-left: 300px;
+    margin-bottom: 20px;
+    width: 365px;
 }
 .footer {
     padding: 25px;
 }
-
 .center {
     display: flex;
     justify-content: center;
 }
 
-.left-button {
-    margin-right: 25px;
-}
-
-.right-button {
-    margin-left: 25px;
-}
-
 .button {
-    width: 250px;
+    width: 350px;
 }
 .container {
     padding-bottom: 10px;
