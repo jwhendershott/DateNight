@@ -27,21 +27,16 @@ body {
     margin-top: 50px;
     padding-bottom: 50px;
 }
-.breweryCard {
+.infoCard {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    width: 365px;
+    width: 380px;
     font-size: 24px;
 }
-.eventCard {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    width: 365px;
-    font-size: 20px;
+#event-url{
+    font-size: 22px;
     font-family: serif;
-    
 }
 .footer {
     padding: 25px;
