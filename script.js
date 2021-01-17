@@ -18,13 +18,16 @@ $("#searchButton").on("click", function(event) {
         method: "GET"
     }).then(function(response) {
         console.log(response);
-        console.log(response[0].name);
-        console.log(response[0].phone);
-        console.log(response[0].wbesite_url);
+        // Makes the brewery listed random
+        var breweryChoice = Math.floor(Math.random() * 5);
+        console.log(breweryChoice);
+        console.log(response[breweryChoice].name);
+        console.log(response[breweryChoice].phone);
+        console.log(response[breweryChoice].website_url);
         
-        $("#name").html("Name: " + response[0].name);
-        $("#phone").html("Phone Number: " + response[0].phone);
-        $("#street").html("Street: " + response[0].street);
+        $("#name").html("Name: " + response[breweryChoice].name);
+        $("#phone").html("Phone Number: " + response[breweryChoice].phone);
+        $("#street").html("Street: " + response[breweryChoice].street);
 
     });
     
@@ -40,17 +43,19 @@ $("#searchButton").on("click", function(event) {
     //generates call and logs response for ticketmaster
     $.ajax({
         type:"GET",
-        url:"https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey=" + tmKey + "&city=" + city,
+        url:"https://app.ticketmaster.com/discovery/v2/events.json?size=5&apikey=" + tmKey + "&city=" + city,
         async:true,
         dataType: "json",
         success: function(response) {
                     console.log(response);
+                    // Makes the event listed random
+                    var eventChoice = Math.floor(Math.random() * 5);
                     // Parse the response.
-                    console.log(response._embedded.events[0].name);
-                    console.log(response._embedded.events[0].url);
+                    console.log(response._embedded.events[eventChoice].name);
+                    console.log(response._embedded.events[eventChoice].url);
 
-                    $("#event-name").html("Event Name: " + response._embedded.events[0].name);
-                    $("#event-url").html("<a href='" + response._embedded.events[0].url + "'>" + response._embedded.events[0].url + "</a>");
+                    $("#event-name").html("Event Name: " + response._embedded.events[eventChoice].name);
+                    $("#event-url").html("<a href='" + response._embedded.events[eventChoice].url + "'>" + response._embedded.events[eventChoice].url + "</a>");
                     
 
                 },
