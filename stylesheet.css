@@ -35,7 +35,7 @@ body {
     font-size: 24px;
 }
 #event-url{
-    font-size: 22px;
+    font-size: 20px;
     font-family: serif;
 }
 .footer {
@@ -50,4 +50,9 @@ body {
 }
 .container {
     padding-bottom: 10px;
+}
+.modal-card-body {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
 }
