@@ -84,5 +84,19 @@ $("#searchButton").on("click", function(event) {
 $("#searchResults").hide();
 
 $("#searchButton").click(function(){
-    $("#searchResults").show();
+    var searchBar = $("#city-field").val();
+    var modal = $(".modal");
+    
+    if (searchBar == "") {
+        modal.addClass("is-active");
+        $(".modal-close").click(function(){
+            modal.removeClass("is-active");
+        });
+        $(".modal-background").click(function(){
+            modal.removeClass("is-active");
+        });
+    }
+    else {
+        $("#searchResults").show();
+    }
 })
