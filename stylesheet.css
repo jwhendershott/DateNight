@@ -38,6 +38,9 @@ body {
     font-size: 20px;
     font-family: serif;
 }
+#event-name {
+    text-align: center;
+}
 .footer {
     padding: 25px;
 }
@@ -55,4 +58,7 @@ body {
     text-align: center;
     font-family: 'Fraunces', serif;
     font-size: 22px;
+}
+#map { 
+    position: absolute; top: 0; bottom: 0; width: 70%; 
 }
