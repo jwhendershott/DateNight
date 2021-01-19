@@ -87,8 +87,19 @@ function mapboxAPI(streetAddress, cityAddress, stateAddress, zipCode) {
         method: "GET"
     }).then(function(response) {
         console.log(response);
-    });
-};
+        var lng = response.features[0].center[0];
+        var lat = response.features[0].center[1];
+        
+        mapboxgl.accessToken = 'pk.eyJ1IjoicmNoYXBoZWthciIsImEiOiJja2swcHU5eGowZzlrMm9vdGZjYW41cmQyIn0.6LlorWQZFVTlXJcLezW6pw';
+        var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [lng, lat], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+        });
+    });    
+});
+
 
 $("#searchResults").hide();
 
