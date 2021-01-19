@@ -92,13 +92,13 @@ function mapboxAPI(streetAddress, cityAddress, stateAddress, zipCode) {
         
         mapboxgl.accessToken = 'pk.eyJ1IjoicmNoYXBoZWthciIsImEiOiJja2swcHU5eGowZzlrMm9vdGZjYW41cmQyIn0.6LlorWQZFVTlXJcLezW6pw';
         var map = new mapboxgl.Map({
-        container: 'map', // container id
-        style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [lng, lat], // starting position [lng, lat]
-        zoom: 9 // starting zoom
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [lng, lat],
+            zoom: 17
         });
     });    
-});
+};
 
 
 $("#searchResults").hide();
