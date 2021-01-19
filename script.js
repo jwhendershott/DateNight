@@ -5,7 +5,7 @@
 var city = document.getElementById("city-field");
 const tmKey = "8IbZBo40AnRzs987iA70DEBWvamJn6Ub"
 
-// .on("click") function associated with Find Drinks button
+// .on("click") function associated with search button
 $("#searchButton").on("click", function(event) {
     event.preventDefault();
     city = document.getElementById("city-field").value;
@@ -34,7 +34,15 @@ $("#searchButton").on("click", function(event) {
         var cityAddress = response[breweryChoice].city+ "%20";
         var stateAddress = response[breweryChoice].state + "%20";
         var zipCode = response[breweryChoice].postal_code + "%20";
-        mapboxAPI(streetAddress, cityAddress, stateAddress, zipCode);
+        
+        // Conditional statement to account for lack of brewery API information
+        if (response[breweryChoice].street == "") {
+            $("#street").text("Street: Address information not available");
+            $("#mapbox").hide();
+        } else {
+            $("#mapbox").show();
+            mapboxAPI(streetAddress, cityAddress, stateAddress, zipCode);
+        };
 
     });
     
@@ -123,6 +131,7 @@ $("#searchButton").click(function(){
         $("#searchResults").show();
     }
 })
+
 $("#mapbox").click(function(){
     var mapModal = $("#mapModal");
     
