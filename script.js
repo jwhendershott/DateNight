@@ -91,13 +91,16 @@ function mapboxAPI(streetAddress, cityAddress, stateAddress, zipCode) {
         var lat = response.features[0].center[1];
         
         mapboxgl.accessToken = 'pk.eyJ1IjoicmNoYXBoZWthciIsImEiOiJja2swcHU5eGowZzlrMm9vdGZjYW41cmQyIn0.6LlorWQZFVTlXJcLezW6pw';
-        new mapboxgl.Map({
+        var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v11',
             center: [lng, lat],
             zoom: 17
         });
-    });    
+        new mapboxgl.Marker()
+            .setLngLat([lng, lat])
+            .addTo(map);
+        });    
 };
 
 
