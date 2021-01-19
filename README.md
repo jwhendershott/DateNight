@@ -8,7 +8,7 @@
 
 https://jwhendershott.github.io/NightOut/
 
-A browser based application that generates a random brewry location and event based on the user's specific city using the ticketmaster API and Open Brewery DB API.
+A browser based application that generates a random brewery location and event based on the user's specific city using the ticketmaster API and Open Brewery DB API.
 
 * Mobile rsponsive
 * Displays location and contact information for Breweries
