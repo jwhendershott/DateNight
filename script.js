@@ -101,18 +101,29 @@ $("#searchResults").hide();
 
 $("#searchButton").click(function(){
     var searchBar = $("#city-field").val();
-    var modal = $(".modal");
+    var alertModal = $("#alertModal");
     
     if (searchBar == "") {
-        modal.addClass("is-active");
+        alertModal.addClass("is-active");
         $(".modal-close").click(function(){
-            modal.removeClass("is-active");
+            alertModal.removeClass("is-active");
         });
         $(".modal-background").click(function(){
-            modal.removeClass("is-active");
+            alertModal.removeClass("is-active");
         });
     }
     else {
         $("#searchResults").show();
     }
+})
+$("#mapbox").click(function(){
+    var mapModal = $("#mapModal");
+    
+    mapModal.addClass("is-active");
+    $(".modal-close").click(function(){
+        mapModal.removeClass("is-active");
+    });
+    $(".modal-background").click(function(){
+        mapModal.removeClass("is-active");
+    });
 })
