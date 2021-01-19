@@ -13,22 +13,14 @@ $("#searchButton").on("click", function(event) {
     event.preventDefault();
     city = document.getElementById("city-field").value;
     localStorage.setItem("City Name", city);
-    
-    //logs updated city value to console
-    console.log(city);
 
-    //generates call and logs response for openbrewery
+    //generates call for openbrewery
     $.ajax({
         url: "https://api.openbrewerydb.org/breweries?by_city=" + city + "&sort=-name ",
         method: "GET"
     }).then(function(response) {
-        console.log(response);
         // Makes the brewery listed random
-        var breweryChoice = Math.floor(Math.random() * 5);
-        console.log(breweryChoice);
-        console.log(response[breweryChoice].name);
-        console.log(response[breweryChoice].phone);
-        console.log(response[breweryChoice].website_url);
+        var breweryChoice = Math.floor(Math.random() * 20);
         
         $("#name").html("Name: " + response[breweryChoice].name);
         $("#phone").html("Phone Number: " + response[breweryChoice].phone);
@@ -53,14 +45,12 @@ $("#searchButton").on("click", function(event) {
     
 })
 
-// .on("click") function associated with Find Event button
+// .on("click") function associated with the search button
 $("#searchButton").on("click", function(event) {
     event.preventDefault();
     city = document.getElementById("city-field").value;
-    //logs updated city value to console
-    console.log(city);
 
-    //generates call and logs response for ticketmaster
+    //generates call for ticketmaster
     $.ajax({
         type:"GET",
         url:"https://app.ticketmaster.com/discovery/v2/events.json?size=5&apikey=" + tmKey + "&city=" + city,
@@ -70,14 +60,10 @@ $("#searchButton").on("click", function(event) {
                     console.log(response);
                     // Makes the event listed random
                     var eventChoice = Math.floor(Math.random() * 5);
-                    // Parse the response.
-                    console.log(response._embedded.events[eventChoice].name);
-                    console.log(response._embedded.events[eventChoice].url);
 
                     $("#event-name").html("Event Name: " + response._embedded.events[eventChoice].name);
                     $("#event-url").attr("href", response._embedded.events[eventChoice].url);
                     $("#event-url").attr("target", "_blank");
-                    
 
                 },
         error: function(err) {
@@ -89,17 +75,12 @@ $("#searchButton").on("click", function(event) {
 
 // Function associated with Mapbox API
 function mapboxAPI(streetAddress, cityAddress, stateAddress, zipCode) {
-    console.log(streetAddress);
-    console.log(cityAddress);
-    console.log(stateAddress);
-    console.log(zipCode);
 
     // Generates and logs response from Mapbox
     $.ajax({
         url: "https://api.mapbox.com/geocoding/v5/mapbox.places/" + streetAddress + cityAddress + stateAddress + zipCode + ".json?access_token=pk.eyJ1IjoicmNoYXBoZWthciIsImEiOiJja2swcHU5eGowZzlrMm9vdGZjYW41cmQyIn0.6LlorWQZFVTlXJcLezW6pw",
         method: "GET"
     }).then(function(response) {
-        console.log(response);
         var lng = response.features[0].center[0];
         var lat = response.features[0].center[1];
         
