@@ -1,6 +1,6 @@
 # Night Out
 
-**INSERT SCREENSHOT**
+![Night Out](https://user-images.githubusercontent.com/70990105/105071867-c094f780-5a4a-11eb-9b61-5aa93394cc15.gif)
 
 <hr>
 
@@ -16,11 +16,11 @@ A browser based application that generates a random brewery location and event b
 
 ## Credits
 
-Carlos Cantu: https://github.com/charliecan2
-Rahul Chaphekar: https://github.com/rchaphekar1
-Open Brewery DB: https://www.openbrewerydb.org/
-TicketMaster: https://developer.ticketmaster.com/
-mapbox.com: https://docs.mapbox.com/
+* Carlos Cantu: https://github.com/charliecan2
+* Rahul Chaphekar: https://github.com/rchaphekar1
+* Open Brewery DB: https://www.openbrewerydb.org/
+* TicketMaster: https://developer.ticketmaster.com/
+* mapbox.com: https://docs.mapbox.com/
 
 
 ## License
