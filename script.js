@@ -8,11 +8,12 @@ const tmKey = "8IbZBo40AnRzs987iA70DEBWvamJn6Ub";
 var cityNameStorage = localStorage.getItem("City Name");
 $("#city-field").val(cityNameStorage);
 
-// .on("click") function associated with Find Drinks button
+// .on("click") function associated with search button
 $("#searchButton").on("click", function(event) {
     event.preventDefault();
     city = document.getElementById("city-field").value;
     localStorage.setItem("City Name", city);
+    
     //logs updated city value to console
     console.log(city);
 
