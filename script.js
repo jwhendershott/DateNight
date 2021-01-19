@@ -55,7 +55,8 @@ $("#searchButton").on("click", function(event) {
                     console.log(response._embedded.events[eventChoice].url);
 
                     $("#event-name").html("Event Name: " + response._embedded.events[eventChoice].name);
-                    $("#event-url").html("<a href='" + response._embedded.events[eventChoice].url + "'>" + response._embedded.events[eventChoice].url + "</a>");
+                    $("#event-url").attr("href", response._embedded.events[eventChoice].url);
+                    $("#event-url").attr("target", "_blank");
                     
 
                 },
