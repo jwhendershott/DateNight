@@ -18,7 +18,7 @@
     font-size: 30px;
 }
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://jwhendershott.github.io/DateNight/site-background.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://jwhendershott.github.io/NightOut/site-background.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-blend-mode: darken;
@@ -35,11 +35,11 @@ body {
     font-size: 24px;
 }
 #event-url{
-    font-size: 20px;
+    font-size: 24px;
     font-family: serif;
-}
-#event-name {
-    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 250px;
 }
 .footer {
     padding: 25px;
@@ -48,7 +48,7 @@ body {
     display: flex;
     justify-content: center;
 }
-.button {
+#searchButton {
     width: 350px;
 }
 .container {
