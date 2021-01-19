@@ -29,6 +29,13 @@ $("#searchButton").on("click", function(event) {
         $("#phone").html("Phone Number: " + response[breweryChoice].phone);
         $("#street").html("Street: " + response[breweryChoice].street);
 
+        // Creates variables for mapboxAPI and calls function
+        var streetAddress = response[breweryChoice].street + "%20";
+        var cityAddress = response[breweryChoice].city+ "%20";
+        var stateAddress = response[breweryChoice].state + "%20";
+        var zipCode = response[breweryChoice].postal_code + "%20";
+        mapboxAPI(streetAddress, cityAddress, stateAddress, zipCode);
+
     });
     
 })
@@ -67,15 +74,16 @@ $("#searchButton").on("click", function(event) {
     
 });
 
-// .on("click") function associated with Mapbox API
-$("#searchButton").on("click", function(event) {
-    event.preventDefault();
-    city = document.getElementById("city-field").value;
-    console.log(city);
+// Function associated with Mapbox API
+function mapboxAPI(streetAddress, cityAddress, stateAddress, zipCode) {
+    console.log(streetAddress);
+    console.log(cityAddress);
+    console.log(stateAddress);
+    console.log(zipCode);
 
     // Generates and logs response from Mapbox
     $.ajax({
-        url: "https://api.mapbox.com/geocoding/v5/mapbox.places/" + city + ".json?access_token=pk.eyJ1IjoicmNoYXBoZWthciIsImEiOiJja2swcHU5eGowZzlrMm9vdGZjYW41cmQyIn0.6LlorWQZFVTlXJcLezW6pw",
+        url: "https://api.mapbox.com/geocoding/v5/mapbox.places/" + streetAddress + cityAddress + stateAddress + zipCode + ".json?access_token=pk.eyJ1IjoicmNoYXBoZWthciIsImEiOiJja2swcHU5eGowZzlrMm9vdGZjYW41cmQyIn0.6LlorWQZFVTlXJcLezW6pw",
         method: "GET"
     }).then(function(response) {
         console.log(response);
@@ -89,9 +97,9 @@ $("#searchButton").on("click", function(event) {
         center: [lng, lat], // starting position [lng, lat]
         zoom: 9 // starting zoom
         });
-    });
-    
+    });    
 });
+
 
 $("#searchResults").hide();
 
