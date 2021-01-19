@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;1,700&display=swap" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -52,6 +54,9 @@
                 <p id="street"></p>
               </div>
             </div>
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item" id="mapbox">Open in Mapbox</a>
+            </footer>
           </div>
         </div>
         <div class="column listItems has-text-primary"><u>Event</u><br>
@@ -71,10 +76,17 @@
         </div>
       </div>
     </section>
-    <div class="modal">
+    <div class="modal" id="alertModal">
       <div class="modal-background"></div>
       <div class="modal-card">
         <section class="modal-card-body">Please input a city name onto the search bar to find a brewery/event.</section>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div class="modal" id="mapModal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <div id="map"></div>
       </div>
       <button class="modal-close is-large" aria-label="close"></button>
     </div>
